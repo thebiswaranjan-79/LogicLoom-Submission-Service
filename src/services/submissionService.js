@@ -10,8 +10,9 @@ class SubmissionService {
     return "PONG";
   }
 
-  async addSubmission(submission) {
-    const submission = this.submissionRepository.createSubmission(submission);
+  async addSubmission(submissionPayload) {
+    const submission =
+      this.submissionRepository.createSubmission(submissionPayload);
 
     if (!submission) {
       // TODO :  Add error Handling Here
