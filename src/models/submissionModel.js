@@ -9,6 +9,10 @@ const submissionSchema = new mongoose.Schema({
     type: String,
     required: [true, "Code for the Submission is Missing"],
   },
+  code: {
+    type: String,
+    required: [true, "Code for the Submission is Missing"],
+  },
   language: {
     type: String,
     required: [true, "Language for the Submission is Missing"],
@@ -20,6 +24,5 @@ const submissionSchema = new mongoose.Schema({
   },
 });
 
-
-const Submission = mongoose.model('Submission', submissionSchema);
+const Submission = mongoose.model("Submission", submissionSchema);
 module.exports = Submission;
